@@ -1,0 +1,12 @@
+function createCounter(n) {
+  let count = n;
+  return function() {
+    return count++;
+  }
+}
+
+const n = 10;
+const counter = createCounter(n);
+console.log(counter()); // Output: 10
+console.log(counter()); // Output: 11
+console.log(counter()); // Output: 12
